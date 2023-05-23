@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="10dp"
+    android:layout_marginTop="10dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/TicketsBannerImageView"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:scaleType="fitXY"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/astronaut"
+        app:shapeAppearanceOverlay="@style/RoundedStyle"/>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/TicketsBannerImageView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/image_shape_background"
+        android:padding="20dp">
+
+        <TextView
+            android:id="@+id/TicketTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            android:text="Astronaut"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            />
+
+        <TextView
+            android:id="@+id/TicketPerformancePlace"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/TicketTitleTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:text="Astronaut Convention Center"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:textColor="#878181"
+            />
+
+        <ImageView
+            android:id="@+id/TicketsTimeDurationIcon"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/TicketPerformancePlace"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/baseline_calendar_today_24"
+            />
+
+        <TextView
+            android:id="@+id/TicketsEventsDetailsTimeTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/TicketsTimeDurationIcon"
+            app:layout_constraintTop_toBottomOf="@+id/TicketPerformancePlace"
+            android:text="23 - 27 Jun, 2021"
+            android:textColor="#878181"
+            android:layout_marginTop="10dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginStart="10dp"/>
+
+        <ImageView
+            android:id="@+id/TimeOfPerformanceIcon"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            app:layout_constraintStart_toEndOf="@+id/TicketsEventsDetailsTimeTextView"
+            app:layout_constraintTop_toBottomOf="@+id/TicketPerformancePlace"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="20dp"
+            android:src="@drawable/baseline_access_time_24"
+            />
+
+        <TextView
+            android:id="@+id/PerformanceTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toEndOf="@+id/TimeOfPerformanceIcon"
+            app:layout_constraintTop_toBottomOf="@+id/TicketPerformancePlace"
+            android:text="4pm - 8pm"
+            android:layout_marginTop="10dp"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginStart="10dp"
+            android:textColor="#878181"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

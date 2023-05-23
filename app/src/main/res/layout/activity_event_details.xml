@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".EventDetailsActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/BottomBarBuyTicketsSection"
+        >
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/ImageSectionPopularItemDetails"
+                android:layout_width="match_parent"
+                android:layout_height="400dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <ImageView
+                    android:id="@+id/PopularItemImageView"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/no_anunciar"
+                    android:scaleType="fitXY"
+                    />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    android:background="@drawable/shade_background"
+                    tools:layout_editor_absoluteX="20dp"
+                    tools:layout_editor_absoluteY="-178dp" />
+
+                <TextView
+                    android:id="@+id/PopularItemDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    android:text="San Francesco CU Center"
+                    android:textStyle="bold"
+                    android:textColor="#676565"
+                    android:textSize="20sp"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginBottom="10dp"
+                    />
+
+                <TextView
+                    android:id="@+id/PopularItemTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:layout_constraintStart_toStartOf="@+id/PopularItemDescription"
+                    app:layout_constraintBottom_toTopOf="@+id/PopularItemDescription"
+                    android:text="No Anunciar"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="35sp"
+                    />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <ImageView
+                android:id="@+id/TimeDurationIcon"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ImageSectionPopularItemDetails"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/baseline_calendar_today_24"
+                />
+
+            <TextView
+                android:id="@+id/EventsDetailsTimeTextView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@+id/TimeDurationIcon"
+                app:layout_constraintTop_toBottomOf="@+id/ImageSectionPopularItemDetails"
+                android:text="23 - 27 Jun, 2021"
+                android:textColor="#6C6A6A"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginStart="10dp"/>
+
+            <ImageView
+                android:id="@+id/TimeOfPerformanceIcon"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                app:layout_constraintStart_toEndOf="@+id/EventsDetailsTimeTextView"
+                app:layout_constraintTop_toBottomOf="@+id/ImageSectionPopularItemDetails"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/baseline_access_time_24"
+                />
+
+            <TextView
+                android:id="@+id/PerformanceTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toEndOf="@+id/TimeOfPerformanceIcon"
+                app:layout_constraintTop_toBottomOf="@+id/ImageSectionPopularItemDetails"
+                android:text="4pm - 8pm"
+                android:layout_marginTop="10dp"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#6C6A6A"
+                android:layout_marginStart="10dp"/>
+
+            <TextView
+                android:id="@+id/DescriptionTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/TimeDurationIcon"
+                android:text="Description"
+                android:textColor="@color/black"
+                android:layout_margin="20dp"
+                android:textStyle="bold"
+                android:textSize="30dp"/>
+
+            <TextView
+                android:id="@+id/DescriptionDetails"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:text="Demo text is so bad or so good. Demo text is so bad or so good. Demo text is so bad or so good. Demo text is so bad or so good. Demo text is so bad or so good. Demo text is so bad or so good."
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#6C6A6A"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/DescriptionTitle" />
+
+            <TextView
+                android:id="@+id/SpeakersTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/DescriptionDetails"
+                android:text="Speakers"
+                android:textColor="@color/black"
+                android:layout_margin="20dp"
+                android:textStyle="bold"
+                android:textSize="30dp"/>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/ProductDetailsSpeakersRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/SpeakersTitle"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginBottom="20dp"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+
+
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/BottomBarBuyTicketsSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="@drawable/bottombar_background"
+        android:layout_margin="10dp"
+        android:alpha="0.8"
+        >
+
+        <TextView
+            android:id="@+id/PriceDetailsOfEvents"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_margin="10dp"
+            android:textColor="#C6C2C2"
+            android:text="$20"
+            android:textStyle="bold"
+            android:textSize="40sp"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/PriceDetailsOfEvents"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:text="10% off for early tickets"
+            android:textColor="#C6C2C2"
+            android:textSize="20sp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginStart="10dp"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:layout_marginEnd="20dp"
+            android:text="buy ticket"
+            android:background="@drawable/button_background"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

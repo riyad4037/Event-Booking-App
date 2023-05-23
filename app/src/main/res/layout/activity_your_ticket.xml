@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:background="#E3DDDD"
+    tools:context=".YourTicketActivity">
+
+
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/BottomNavigationBarTicket"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:menu="@menu/menu_item"
+        android:background="@drawable/bottombar_background"
+        app:itemIconTint="@drawable/item_select_manu_item"
+        app:itemTextColor="@drawable/item_select_manu_item"
+        android:alpha="0.86"
+        android:layout_marginBottom="20dp"
+        />
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
